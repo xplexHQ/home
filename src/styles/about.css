@@ -1,0 +1,209 @@
+/* About pages styling */
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: rgba(47, 28, 66, 0.4);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--gray-6);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.about-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.about-header h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+  background: linear-gradient(90deg, var(--accent-high), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.about-content {
+  line-height: 1.8;
+  color: var(--gray-2);
+}
+
+.about-content h2 {
+  font-size: 1.8rem;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent-high);
+}
+
+.about-content h3 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--white);
+}
+
+.about-content h4 {
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--accent);
+}
+
+.about-content p {
+  margin-bottom: 1.5rem;
+}
+
+.about-content a {
+  color: var(--accent-high);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--accent);
+  transition: all 0.2s ease;
+}
+
+.about-content a:hover {
+  color: var(--white);
+  border-bottom: 1px solid var(--white);
+}
+
+.about-content ul, .about-content ol {
+  margin: 1.5rem 0;
+  padding-left: 1.5rem;
+}
+
+.about-content li {
+  margin-bottom: 0.5rem;
+}
+
+.about-content blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+  border-left: 4px solid var(--accent);
+  background: rgba(47, 28, 66, 0.6);
+  font-style: italic;
+}
+
+.about-content hr {
+  margin: 2rem 0;
+  border: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+}
+
+.about-content table {
+  width: 100%;
+  margin: 2rem 0;
+  border-collapse: collapse;
+}
+
+.about-content th {
+  background: rgba(164, 0, 192, 0.2);
+  color: var(--white);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.about-content td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--gray-6);
+}
+
+.about-content tr:hover {
+  background: rgba(164, 0, 192, 0.1);
+}
+
+.about-content code {
+  font-family: 'Consolas', 'Monaco', monospace;
+  background: var(--gray-7);
+  padding: 0.2rem 0.4rem;
+  border-radius: 3px;
+  font-size: 0.9em;
+  color: var(--accent-high);
+}
+
+.about-content pre {
+  background: var(--gray-7);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin: 1.5rem 0;
+}
+
+/* Admonitions styling */
+.about-content .tip,
+.about-content .note,
+.about-content .warning {
+  margin: 2rem 0;
+  padding: 1rem 1.5rem;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.about-content .tip {
+  background: rgba(164, 0, 192, 0.15);
+  border-left: 4px solid var(--accent);
+}
+
+.about-content .note {
+  background: rgba(47, 28, 66, 0.6);
+  border-left: 4px solid var(--gray-3);
+}
+
+.about-content .warning {
+  background: rgba(192, 0, 0, 0.15);
+  border-left: 4px solid #c00;
+}
+
+/* Sidebar for about section */
+.about-sidebar {
+  border-right: 1px solid var(--gray-6);
+  padding-right: 2rem;
+  margin-right: 2rem;
+}
+
+.about-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-sidebar li {
+  margin-bottom: 0.75rem;
+}
+
+.about-sidebar a {
+  color: var(--gray-3);
+  text-decoration: none;
+  transition: color 0.2s;
+  display: block;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.about-sidebar a:hover,
+.about-sidebar a.active {
+  color: var(--accent-high);
+  background: rgba(164, 0, 192, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .about-container {
+    padding: 1.5rem;
+  }
+
+  .about-header h1 {
+    font-size: 2rem;
+  }
+
+  .about-sidebar {
+    border-right: none;
+    border-bottom: 1px solid var(--gray-6);
+    padding-right: 0;
+    padding-bottom: 1.5rem;
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+}

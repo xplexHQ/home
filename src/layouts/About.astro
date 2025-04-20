@@ -1,0 +1,23 @@
+---
+import Main from './Main.astro';
+import AboutSidebar from '../components/AboutSidebar.astro';
+import '../styles/about.css';
+
+const { frontmatter } = Astro.props;
+const { title, description } = frontmatter;
+const currentPath = Astro.url.pathname;
+---
+
+<Main title={title} description={description}>
+  <div class="container" style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;">
+    <AboutSidebar currentPath={currentPath} />
+    <div class="about-container" style="flex: 1;">
+      <header class="about-header">
+        <h1>{title}</h1>
+      </header>
+      <div class="about-content">
+        <slot />
+      </div>
+    </div>
+  </div>
+</Main>

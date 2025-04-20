@@ -1,0 +1,23 @@
+---
+const { currentPath } = Astro.props;
+const aboutPages = [
+  { title: "About Us", path: "/about" },
+  { title: "Contact Us", path: "/about/contact" },
+  { title: "Privacy Policy", path: "/about/privacy" },
+  { title: "Terms of Service", path: "/about/terms" },
+  { title: "Shipping Policy", path: "/about/shipping" },
+  { title: "Cancellation & Refunds", path: "/about/cancel" },
+];
+---
+
+<div class="about-sidebar">
+  <ul>
+    {aboutPages.map(page => (
+      <li>
+        <a href={page.path} class={currentPath === page.path ? 'active' : ''}>
+          {page.title}
+        </a>
+      </li>
+    ))}
+  </ul>
+</div>

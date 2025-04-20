@@ -1,0 +1,242 @@
+---
+import { Image } from 'astro:assets';
+import Main from '../layouts/Main.astro';
+import Xplex from '@components/Xplex.astro';
+
+import xplexLogo from '../../public/logo.svg';
+import xplexBanner from '../../public/xplex-banner.jpg';
+import xplexXposed from '../../public/xplex-xposed.excalidraw.svg';
+import xplexXplained from '../../public/xplex-xplained.excalidraw.svg';
+
+const title = "xplex | Multi-stream Renaissance";
+const description = "xplex—your personal, self-hosted, open source, multi-streaming server";
+---
+
+<Main title={title} description={description}>
+  <section class="hero container">
+    <Image src={xplexLogo} alt="xplex logo" class="hero-image" />
+
+    <h1>The renaissance will not be televised</h1>
+    <p class="tagline">But it <b>will</b> be multi-streamed LIVE&mdash;with <Xplex /></p>
+
+    <div class="action-buttons">
+      <a href="https://docs.xplex.me/setup" class="button secondary">Setup Now</a>
+      <a href="https://tally.so/r/mezW6q" class="button primary" rel="noopener">Request Invite</a>
+      <a href="/about" class="button secondary">Learn More</a>
+    </div>
+  </section>
+
+  <section class="demo-section container">
+    <Image src={xplexBanner} alt="Person using xplex for multi-streaming setup" class="demo-img" />
+    <Image src={xplexXposed} alt="Diagram explaining xplex functionality" class="diagram" />
+  </section>
+
+  <section class="demo-section container">
+    <p class="section-subtitle">
+      <Xplex />&mdash;your personal, self-hosted, open source, multi-streaming server to simultaneously stream to as many platforms as you want to.
+    </p>
+    <div class="banner">
+      <Xplex /> as a service is <b>coming soon™</b>
+      &mdash; <a href="https://tally.so/r/mezW6q" rel="noopener">request invite</a> for early bird access!
+    </div>
+  </section>
+
+  <section class="feature-grid container" aria-labelledby="features-title">
+    <div class="feature-card">
+      <h3 class="feature-title">🔓 Open Source</h3>
+      <p class="feature-desc">Inspect the code, customize, contribute, and tell a friend.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3 class="feature-title">🖥️ Self-Hosted</h3>
+      <p class="feature-desc">Host <Xplex /> on your own infrastructure for complete control of your setup and data.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3 class="feature-title">📡 Multi-Stream</h3>
+      <p class="feature-desc">Stream to as many platforms as you want—simultaneously.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3 class="feature-title">⚡ High Performance</h3>
+      <p class="feature-desc">Optimized for speed and efficiency, works even with limited resources.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3 class="feature-title">🧩 Customizable</h3>
+      <p class="feature-desc">Tailor your stream with extensive low level controls, or enjoy the sensible defaults.</p>
+    </div>
+
+    <div class="feature-card">
+      <h3 class="feature-title">🌐 Platform Agnostic</h3>
+      <p class="feature-desc">Stream to any platform with RTMP ingest—Twitch, YouTube; even a custom one!</p>
+    </div>
+  </section>
+
+  <section class="demo-section container">
+    <h2 class="section-title">How <Xplex /> Works</h2>
+    <p class="section-subtitle">
+      <Xplex /> is an RTMP server that acts as a splitter and a bridge between your streaming software and the platforms you want to reach, without the hassle of managing multiple streams.
+    </p>
+    <Image src={xplexXplained} alt="Detailed diagram of xplex architecture and workflow" class="diagram" />
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="section-title">Ready to Transform Your Streaming?</h2>
+      <p class="section-subtitle">
+        Join the multi-streaming renaissance with <Xplex />—your personal, self-hosted, open source, multi-streaming server!
+      </p>
+      <div class="action-buttons">
+        <a href="https://docs.xplex.me/setup" class="button secondary">Setup Now</a>
+        <a href="https://tally.so/r/mezW6q" class="button primary" rel="noopener">Request Invite</a>
+        <a href="/docs" class="button secondary">Learn More</a>
+      </div>
+    </div>
+  </section>
+</Main>
+
+<style>
+/* Landing page specific styles */
+h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+  background: linear-gradient(90deg, var(--accent-high), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero {
+  padding: 8rem 0;
+  text-align: center;
+  position: relative;
+}
+
+.banner {
+  background: rgba(164, 0, 192, 0.1);
+  border: 1px solid var(--accent);
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+  backdrop-filter: blur(5px);
+}
+
+.banner a {
+  color: var(--accent-high);
+  text-decoration: none;
+}
+
+.tagline {
+  font-size: 2rem;
+  color: var(--gray-2);
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.feature-card {
+  background: rgba(47, 28, 66, 0.5);
+  border-radius: 8px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--gray-6);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 25px rgba(164, 0, 192, 0.2);
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--white);
+}
+
+.feature-desc {
+  color: var(--gray-3);
+  line-height: 1.6;
+}
+
+.demo-section {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: var(--white);
+}
+
+.section-subtitle {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--gray-3);
+  margin-bottom: 3rem;
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.diagram {
+  max-width: 100%;
+  padding: 0 2rem;
+}
+
+.demo-img {
+  max-width: 100%;
+  margin: 2rem auto;
+  border-radius: 1rem;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  border: 1px solid var(--accent-low);
+}
+
+.cta-section {
+  padding: 6rem 0;
+  text-align: center;
+  background: linear-gradient(to bottom, transparent, var(--accent-low));
+  margin-top: 4rem;
+}
+
+/* Animation for the hero image */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+.hero-image {
+  animation: float 6s ease-in-out infinite;
+  margin: 4rem auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .action-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h1 { font-size: 2.5rem;  }
+
+  .tagline { font-size: 1.5rem; }
+}
+</style>
