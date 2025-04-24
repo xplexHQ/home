@@ -9,9 +9,9 @@ const currentPath = Astro.url.pathname;
 ---
 
 <Main title={title} description={description}>
-  <div class="container" style="display: flex; flex-wrap: wrap; gap: 2rem; margin-top: 2rem;">
+  <div class="about container">
     <AboutSidebar currentPath={currentPath} />
-    <div class="about-container" style="flex: 1;">
+    <div class="about-wrapper" style="flex: 1;">
       <header class="about-header">
         <h1>{title}</h1>
       </header>

@@ -1,7 +1,14 @@
 /* About pages styling */
 
-.about-container {
-  max-width: 800px;
+.about.container {
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+  gap: 2rem;
+}
+
+.about-wrapper {
+  width: 100%;
   margin: 0 auto;
   padding: 2rem;
   background: rgba(47, 28, 66, 0.4);
@@ -158,12 +165,6 @@
 }
 
 /* Sidebar for about section */
-.about-sidebar {
-  border-right: 1px solid var(--gray-6);
-  padding-right: 2rem;
-  margin-right: 2rem;
-}
-
 .about-sidebar ul {
   list-style: none;
   padding: 0;
@@ -189,18 +190,12 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 768px) {
-  .about-container {
-    padding: 1.5rem;
-  }
+@media (max-width: 1080px) {
+  .about.container { flex-direction: column; }
 
-  .about-header h1 {
-    font-size: 2rem;
-  }
+  .about-header h1 { font-size: 2rem; }
 
   .about-sidebar {
-    border-right: none;
-    border-bottom: 1px solid var(--gray-6);
     padding-right: 0;
     padding-bottom: 1.5rem;
     margin-right: 0;

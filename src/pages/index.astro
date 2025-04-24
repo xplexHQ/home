@@ -22,7 +22,7 @@ const description = "xplex—your personal, self-hosted, open source, multi-stre
     <div class="action-buttons">
       <a href="https://docs.xplex.me/setup" class="button secondary">Setup Now</a>
       <a href="https://tally.so/r/mezW6q" class="button primary" rel="noopener">Request Invite</a>
-      <a href="/about" class="button secondary">Learn More</a>
+      <a href="https://docs.xplex.me/" class="button secondary">Learn More</a>
     </div>
   </section>
 
@@ -90,7 +90,7 @@ const description = "xplex—your personal, self-hosted, open source, multi-stre
       <div class="action-buttons">
         <a href="https://docs.xplex.me/setup" class="button secondary">Setup Now</a>
         <a href="https://tally.so/r/mezW6q" class="button primary" rel="noopener">Request Invite</a>
-        <a href="/docs" class="button secondary">Learn More</a>
+        <a href="https://docs.xplex.me/" class="button secondary">Learn More</a>
       </div>
     </div>
   </section>
@@ -175,10 +175,7 @@ h1 {
   line-height: 1.6;
 }
 
-.demo-section {
-  padding: 4rem 0;
-  text-align: center;
-}
+.demo-section { text-align: center; }
 
 .section-title {
   font-size: 2.5rem;
@@ -198,12 +195,12 @@ h1 {
 
 .diagram {
   max-width: 100%;
-  padding: 0 2rem;
+  height: auto;
 }
 
 .demo-img {
   max-width: 100%;
-  margin: 2rem auto;
+  height: auto;
   border-radius: 1rem;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
   border: 1px solid var(--accent-low);
@@ -229,14 +226,17 @@ h1 {
 }
 
 /* Responsive adjustments */
+@media (max-width: 1080px) {
+  .container { padding: auto 1rem; }
+
+  h1 { font-size: 2.5rem;  }
+
+  .tagline { font-size: 1.5rem; }
+}
 @media (max-width: 768px) {
   .action-buttons {
     flex-direction: column;
     align-items: center;
   }
-
-  h1 { font-size: 2.5rem;  }
-
-  .tagline { font-size: 1.5rem; }
 }
 </style>
